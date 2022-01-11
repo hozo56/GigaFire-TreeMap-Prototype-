@@ -59,9 +59,7 @@ db_subplot_merge <- merge(db_subplot,db_plot,by.x="PLT_CN",by.y="CN",all.x=T)
 #   page 937 for description.
 # TODO: many of the other designs are likely useful, so add those in later. https://github.com/gearslaboratory/carb_treelist/issues/11
 
-#db_subplot_merge <- db_subplot_merge[db_subplot_merge$DESIGNCD==1,]
-
-db_subplot_merge <- db_subplot_merge[db_subplot_merge$DESIGNCD==1,]
+db_subplot_merge <- db_subplot_merge[db_subplot_merge$DESIGNCD==1,] ##### all data is removed!!
 write.csv(db_subplot_merge, file = "subplotmerge.csv")
 # Subplot 2: 0 degrees, 120ft
 # Subplot 3: 120 degrees, 120ft
