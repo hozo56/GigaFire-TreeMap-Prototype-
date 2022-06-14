@@ -119,7 +119,7 @@ for(i in 1:length(unique_id_list)) {
   cond_details <- mongoConn3$find(query = cond_query)
   
   df_CN_invyr[i,1:6] <- c(df_CN_subset[1,][1], df_CN_subset[1,][2], null_pass(plot_details$DESIGNCD), 
-                          null_pass(cond_details$SICOND), null_pass(cond_details$STDAGE), unique_id_list ) #unique plot id
+                          null_pass(cond_details$SICOND), null_pass(cond_details$STDAGE), unique_id_list[i]) #unique plot id
   #print(i)
 }
 
